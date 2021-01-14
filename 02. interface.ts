@@ -43,5 +43,3 @@ interface Read {
     readonly x: number;
     readonly y: number;
 }
-
-// functional type
