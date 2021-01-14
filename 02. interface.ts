@@ -88,7 +88,7 @@ interface Animal4 {
 let arrAni: Animal4 = ["bob", "juju"];
 arrAni[2] = "can"; // error : index 할당을 readonly로 막아놔서 error.
 
-//class type // extends vs implements 
+//class type // 
 // implements an interface
 interface Clock {
     currentTime: Date;
@@ -102,7 +102,13 @@ class NewClock implements Clock{
     constructor(h: number, m: number) { }
 }
 
-//interface extends
-//interface extends(class)
-
-//hybrid types
+// extends vs implements 
+class ClaExtends {
+   private state: any;
+}
+interface InterExtends extends ClaExtends {
+    select(): void;
+}
+class Button extends ClaExtends implements InterExtends {
+    select() {}
+}
