@@ -43,6 +43,8 @@ interface Read {
     readonly x: number;
     readonly y: number;
 }
+let read: Read = {x : 10, y : 15} 
+    read.x = 5; // readonly 속성으로 값을 변경 할 수 없음.
 
 //function type1
 interface Search {
